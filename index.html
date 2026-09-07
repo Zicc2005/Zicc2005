@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zicc2005 | Cyber-Shinto Portfolio & Tansu Vault</title>
+  <meta name="description" content="Portfolio cá nhân phong cách tủ kéo Tansu Nhật Bản kết hợp kiến trúc an toàn thông tin của Zicc2005. Khám phá kho dự án CTF, C++ IoT, Python Automation và Web Dev.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛩️</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- 1. Full Bleed Torii Gate Scenic Background (Phong cách Japan_Elearning) -->
+  <div class="scenic-bg-container" aria-hidden="true">
+    <img 
+      id="scenicBgImg"
+      class="scenic-bg-img" 
+      src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop" 
+      alt="Torii Gate Shrine Atmosphere"
+    >
+    <div class="scenic-overlay-gradient"></div>
+    <div class="scenic-overlay-vignette"></div>
+    <div class="scenic-torii-aura"></div>
+    <div class="mist-layer-1"></div>
+    <div class="mist-layer-2"></div>
+  </div>
+
+  <!-- 2. Floating & Falling Sakura Petals (Hiệu ứng cánh hoa anh đào rơi) -->
+  <div id="sakuraContainer" class="sakura-container" aria-hidden="true"></div>
+
+  <!-- 3. Main Content App Wrapper -->
+  <div class="app-wrapper">
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="brand-badge">
+        <div class="brand-monogram">⛩</div>
+        <div class="brand-text">
+          <h1>Zicc2005 <span style="font-size: 14px; opacity: 0.7;">(Minh Lưu)</span></h1>
+          <span class="brand-tag">Information Security • Auto Script Tool • Reverse Engineering</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button id="btnToggleSound" class="btn-icon-sound" title="Bật/Tắt hiệu ứng âm thanh kéo gỗ">
+          <span>🔊 Âm thanh: Bật</span>
+        </button>
+        <a href="https://github.com/Zicc2005" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub Profile</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Identity Banner -->
+    <section class="hero-banner">
+      <div class="hero-kanji-sub">箪笥アーカイブ • TANSU VAULT ARCHIVE</div>
+      <h2 class="hero-title">Kho Lưu Trữ Tủ Kéo Zicc2005</h2>
+      <p class="hero-desc">
+        Chào mừng đến với không gian cá nhân của Minh Lưu (Zicc2005). Khám phá các công trình nghiên cứu An toàn thông tin, 
+        writeup giải đấu CTF quốc tế, bộ công cụ tự động hoá Auto Script Tool và các nền tảng Web độc đáo qua mô hình tủ tansu đa năng.
+      </p>
+
+      <!-- Stats Strip -->
+      <div class="stats-strip">
+        <div class="stat-chip">
+          <span class="stat-icon">⛩</span>
+          <span>Chủ đề: <strong>Cyber-Shinto</strong></span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-icon">🗄</span>
+          <span>Tổng số: <strong id="repoCountBadge">22 Ô Tủ</strong></span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-icon">🛡</span>
+          <span>Chuyên môn: <strong>Security & Auto Script</strong></span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-icon">⚡</span>
+          <span>Trạng thái: <strong>Active Dev</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cabinet Toolbar (Tìm kiếm, Lọc danh mục, Mở/Đóng tất cả) -->
+    <section class="cabinet-toolbar">
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên repo, thẻ tag (ctf, c++, python)..." autocomplete="off">
+      </div>
+
+      <div class="filter-categories">
+        <button class="filter-pill active" data-category="all">Tất cả ô tủ</button>
+        <button class="filter-pill" data-category="security">🛡 CTF & Bảo mật</button>
+        <button class="filter-pill" data-category="tools">⚡ Auto Script & Tools</button>
+        <button class="filter-pill" data-category="iot">📡 IoT & Phần cứng</button>
+        <button class="filter-pill" data-category="web">🌸 Web & E-Learning</button>
+        <button class="filter-pill" data-category="creative">🎁 Sáng tạo</button>
+      </div>
+
+      <div class="cabinet-master-actions">
+        <button id="btnPullAll" class="btn-master-toggle" title="Rút toàn bộ ngăn kéo ra ngoài">▼ KÉO TẤT CẢ</button>
+        <button id="btnPushAll" class="btn-master-toggle" title="Đẩy toàn bộ ngăn kéo vào trong">▲ ĐÓNG TẤT CẢ</button>
+      </div>
+    </section>
+
+    <!-- Japanese Tansu Cabinet Frame (Khung Tủ Gỗ 3D) -->
+    <main class="tansu-cabinet-frame">
+      <div class="tansu-corner top-left"></div>
+      <div class="tansu-corner top-right"></div>
+      <div class="tansu-corner bottom-left"></div>
+      <div class="tansu-corner bottom-right"></div>
+
+      <div class="cabinet-header-bar">
+        <div class="cabinet-title-kanji">
+          <span>壱号箪笥</span>
+          <span style="font-size: 13px; color: var(--text-muted); font-family: var(--font-sans); font-weight: 500;">(Tủ Ngăn Kéo Số 1 - Vault Drawers)</span>
+        </div>
+        <div class="cabinet-instruction">
+          <span class="pulse-dot"></span>
+          <span>Dùng chuột hoặc ngón tay kéo ngăn tủ (hoặc click) để khám phá</span>
+        </div>
+      </div>
+
+      <!-- Tansu Drawers Grid -->
+      <div id="tansuGrid" class="tansu-grid"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-social-links">
+        <a href="https://github.com/Zicc2005" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <span>GitHub</span>
+        </a>
+        <a href="https://github.com/Zicc2005/Zicc2005" target="_blank" rel="noopener noreferrer" class="footer-link">
+          <span>Profile Repo</span>
+        </a>
+        <a href="mailto:contact@zicc2005.dev" class="footer-link">
+          <span>Email Liên Hệ</span>
+        </a>
+      </div>
+      <p>© 2026 Zicc2005 • Thiết kế Tansu Vault phong cách Torii Nhật Bản • Tích hợp đồng bộ GitHub Pages</p>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
